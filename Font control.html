@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Color and Border Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        p {
+            padding: 20px;
+            border: 2px solid black;
+            width: 400px;
+        }
+
+        .inputs label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .inputs input {
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 150px;
+        }
+
+        .inputs {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 7px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Paragraph to be altered.</h1>
+
+    <div class="container">
+        <!-- Paragraph -->
+        <p id="dummyText">Paragraph to be altered.</p>
+
+        <!-- Inputs for RGB colors and border width -->
+        <div class="inputs">
+            <label for="borderR">Border R(0-255):</label>
+            <input type="number" id="borderR" min="0" max="255" placeholder="0-255"><br>
+
+            <label for="borderG">Border G(0-255):</label>
+            <input type="number" id="borderG" min="0" max="255" placeholder="0-255"><br>
+
+            <label for="borderB">Border B(0-255):</label>
+            <input type="number" id="borderB" min="0" max="255" placeholder="0-255"><br>
+
+            <label for="borderWidth">Border Width:</label>
+            <input type="number" id="borderWidth" min="1" max="20" placeholder="Width in px"><br>
+
+            <label for="backgroundR">Background R(0-255):</label>
+            <input type="number" id="backgroundR" min="0" max="255" placeholder="0-255"><br>
+
+            <label for="backgroundG">Background G(0-255):</label>
+            <input type="number" id="backgroundG" min="0" max="255" placeholder="0-255"><br>
+
+            <label for="backgroundB">Background B(0-255):</label>
+            <input type="number" id="backgroundB" min="0" max="255" placeholder="0-255"><br>
+        </div>
+
+        <!-- Button to apply changes -->
+        <button onclick="applyChanges()">Apply Changes</button>
+    </div>
+
+    <script>
+        // Function to apply changes
+        function applyChanges() {
+            // Get input values
+            const borderR = document.getElementById("borderR").value || 0;
+            const borderG = document.getElementById("borderG").value || 0;
+            const borderB = document.getElementById("borderB").value || 0;
+            const borderWidth = document.getElementById("borderWidth").value || 2;
+
+            const backgroundR = document.getElementById("backgroundR").value || 255;
+            const backgroundG = document.getElementById("backgroundG").value || 255;
+            const backgroundB = document.getElementById("backgroundB").value || 255;
+
+            // Get paragraph element
+            const paragraph = document.getElementById("dummyText");
+
+            // Apply border color and width
+            paragraph.style.borderColor = `rgb(${borderR}, ${borderG}, ${borderB})`;
+            paragraph.style.borderWidth = `${borderWidth}px`;
+
+            // Apply background color
+            paragraph.style.backgroundColor = `rgb(${backgroundR}, ${backgroundG}, ${backgroundB})`;
+        }
+    </script>
+
+</body>
+</html>

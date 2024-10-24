@@ -1,0 +1,110 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* About Me Section */
+.about {
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    margin-bottom: 30px;
+}
+
+.projects h2 {
+    font-size: 2rem;
+}
+
+.projects ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.projects ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.projects ul li a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Video Section */
+.video {
+    text-align: center;
+}
+
+.video h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+video {
+    border-radius: 10px;
+}
